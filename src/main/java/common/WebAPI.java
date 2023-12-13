@@ -102,8 +102,8 @@ public class WebAPI {
 
     //Browser SetUp
     public static WebDriver driver = null;
-    public String browserstack_username = "khanjada_rTRbtl";
-    public String browserstack_accesskey = "bm2dgyj6Kpo4CQirjQ8e";
+    public String browserstack_username = "turtez_rMoJce";
+    public String browserstack_accesskey = "EQiBzD3gsUJdWVHfPpS4";
     public String saucelabs_username = "monsurahmed1";
     public String saucelabs_accesskey = "48bd964a-506f-4ad1-a5f5-f37e060bbea5";
 
@@ -328,7 +328,7 @@ public class WebAPI {
 
 
         //create a string variable which will be unique always
-        String df = new SimpleDateFormat("yyyyMMddhhss").format(new Date());
+        String df = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
 
         //create object variable of TakeScreenshot class
         TakesScreenshot ts = (TakesScreenshot) driver;
@@ -338,7 +338,10 @@ public class WebAPI {
 
         //store the screen shot path in path variable. Here we are storing the screenshots under screenshots folder
         //String path = "ScreenShot\\" + screenshotName + df + ".png";
-        String path = "/Users/hurayra/Documents/DummyTDDMAven/ScreenShot/" + screenshotName + df + ".png";
+
+        //below line added
+        String path = "C:\\Users\\tezir\\IdeaProjects\\GrpupBFinalProject\\Screenshots" + screenshotName + df + ".png";
+        //String path = "/Users/hurayra/Documents/DummyTDDMAven/ScreenShot/" + screenshotName + df + ".png";
 
         //create another File object variable which points(refer) to the above stored path variable
         File destination = new File(path);
