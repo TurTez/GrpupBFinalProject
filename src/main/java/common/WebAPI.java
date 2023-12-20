@@ -340,7 +340,8 @@ public class WebAPI {
         //String path = "ScreenShot\\" + screenshotName + df + ".png";
 
         //below line added
-        String path = "C:\\Users\\tezir\\IdeaProjects\\GrpupBFinalProject\\Screenshots" + screenshotName + df + ".png";
+        String path = "C://Users/tezir/IdeaProjects/GrpupBFinalProject/Screenshots" + screenshotName + df + ".png";
+
         //String path = "/Users/hurayra/Documents/DummyTDDMAven/ScreenShot/" + screenshotName + df + ".png";
 
         //create another File object variable which points(refer) to the above stored path variable
