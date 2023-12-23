@@ -3,6 +3,10 @@ package ebay;
 public class WebElements {
       public static final String inputSearchFieldXpath ="//input[@type='text']";
       public static final String submitButtonXpath ="//input[@type='submit']";
+      public static final String usShoesSize9Xpath = "//span[normalize-space()='9']";
+      public static final String colorXpath = "//div[@id='x-refine__group_1__1']//li[2]//a[1]";
+      public static final String activityXpath= "//*[@id='x-refine__group_1__2']/ul/li[3]/div/a/div/span/input";
+
 
       //Collectible
       public static final String linkCollectiblesXPath = "//*[@id='vl-flyout-nav']/ul/li[5]/a";
@@ -22,7 +26,6 @@ public class WebElements {
 
 
 
-     /*
 
              //signin
               public static final String signInXpath = "//*[@id='gh-ug']/a";
@@ -42,7 +45,12 @@ public class WebElements {
             //Sign in Button
             public static final String clickSignInButtonID = "sgnBt";
 
-    */
+            public static final String electronicsXpath = "//*[@id='vl-flyout-nav']/ul/li[4]/a";
+            public static final String videoGamesXpath = "//*[@id=\"vl-flyout-nav\"]/ul/li[4]/div[2]/div[1]/nav[2]/ul/li[2]/a";
+            public static final String nintendoSwitchGamesXpath = "//p[normalize-space()='Nintendo Switch Games']";
+
+
+
 
 
 

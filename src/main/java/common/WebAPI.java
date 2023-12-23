@@ -340,7 +340,7 @@ public class WebAPI {
         //String path = "ScreenShot\\" + screenshotName + df + ".png";
 
         //below line added
-        String path = "C://Users/tezir/IdeaProjects/GrpupBFinalProject/Screenshots" + screenshotName + df + ".png";
+        String path = "C:\\Users\\tezir\\IdeaProjects\\GrpupBFinalProject\\Screenshots\\" + screenshotName + df + ".png";
 
         //String path = "/Users/hurayra/Documents/DummyTDDMAven/ScreenShot/" + screenshotName + df + ".png";
 
@@ -686,6 +686,12 @@ public class WebAPI {
     public static void selectDropDownByIndex(WebElement element, int value) {
         Select select = new Select(element);
         select.selectByIndex(value);
+    }
+
+    //Turgut Add This method below
+    public static void selectDropDownByStringValue(WebElement element, String value){
+        Select select = new Select(element);
+        select.selectByVisibleText("");
     }
 
     public static void windowMaximize() {

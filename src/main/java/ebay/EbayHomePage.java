@@ -4,6 +4,7 @@ import common.WebAPI;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.testng.Assert;
 
 import static ebay.WebElements.*;
 
@@ -15,6 +16,15 @@ public class EbayHomePage extends WebAPI {
 
     @FindBy(how = How.XPATH,using = submitButtonXpath)
     public WebElement submitButtonWebElement;
+
+    @FindBy(how = How.XPATH, using = usShoesSize9Xpath)
+    public WebElement shoesSize;
+
+    @FindBy(how = How.XPATH, using = colorXpath)
+    public WebElement shoeColor;
+
+    @FindBy(how = How.XPATH, using = activityXpath)
+    public WebElement shoesActivity;
 
     //Collectible / Pokemon
     @FindBy(how = How.XPATH, using = linkCollectiblesXPath)
@@ -34,7 +44,6 @@ public class EbayHomePage extends WebAPI {
 
     @FindBy(how = How.XPATH, using = selectGalaxyS22Xpath)
     public WebElement samsungGalaxys22;
-/*
 
     //sigin
     @FindBy(how = How.XPATH, using = signInXpath )
@@ -59,17 +68,26 @@ public class EbayHomePage extends WebAPI {
     //Sign in Button
     @FindBy(how = How.ID, using = clickSignInButtonID)
     public WebElement clickSignInButtonWebElement;
-*/
+
+    @FindBy(how=How.XPATH, using = electronicsXpath)
+    public WebElement electronics;
+    @FindBy(how = How.XPATH, using = videoGamesXpath)
+    public WebElement videoGames;
+
+    @FindBy(how = How.XPATH, using = nintendoSwitchGamesXpath)
+    public WebElement nintendoSwitchGames;
 
 
 
-    public void inputSearchField(){
-
+    public void searchingNikeShoes(){
         searchFieldWebElement.click();
-        searchFieldWebElement.sendKeys("shirts");
-
+        searchFieldWebElement.sendKeys("nike shoes");
+        submitButtonWebElement.click();
+        shoesSize.click();
+        shoeColor.click();
+        shoesActivity.click();
+        Assert.assertEquals(driver.getTitle(),"nike shoes for sale | eBay");
     }
-
     public void inputSearchFieldNutella(){
         searchFieldWebElement.click();
         searchFieldWebElement.sendKeys("nutella");
@@ -85,10 +103,10 @@ public class EbayHomePage extends WebAPI {
         submitButtonWebElement.click();
     }
 // Combine two methods
-    public void searchItem(){
-        inputSearchField();
+ /*   public void searchItem(){
+        searchingNikeShoes();
         submit();
-    }
+    }*/
 
     public void searchNutella(){
         inputSearchFieldNutella();
@@ -131,19 +149,22 @@ public class EbayHomePage extends WebAPI {
         checkBoxSelect256();
         checkBoxNew();
         selectSamsungGalaxyS22();
-
     }
-
 
   /*  public void TestCollectiblePokemon(){
         clickCollectable();
         clickPokemon();
     }*/
-
   /*  public void clickSignIn(){
         signInWebElement.click();
-        switchAccountWebElement.click();
-
+       switchAccountWebElement.click();
     }*/
+
+    public void navigatingToVideoGames(){
+        mouseHover(electronics);
+        videoGames.click();
+        nintendoSwitchGames.click();
+
+    }
 
 }
